@@ -1,0 +1,2 @@
+do_token = "12345"
+ssh_key_file = "./keys/key"

@@ -1,0 +1,332 @@
+docker run -it --rm -e TF_LOG=DEBUG -v `pwd`:/data sjourdan/terraform:0.7.0-rc4 validate
+2016/08/01 10:38:44 [INFO] Terraform version: 0.7.0 rc4 abfd2c1daf914867b8737ac9419f3bd2ecc7a822
+2016/08/01 10:38:44 [DEBUG] Detected home directory from env var: /root
+2016/08/01 10:38:44 [DEBUG] Detected home directory from env var: /root
+2016/08/01 10:38:44 [DEBUG] Attempting to open CLI config file: /root/.terraformrc
+2016/08/01 10:38:44 [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2016/08/01 10:38:44 [DEBUG] Detected home directory from env var: /root
+2016/08/01 10:38:44 [DEBUG] plugin: waiting for all plugin processes to complete...
+docker run -it --rm -e TF_LOG=DEBUG -v `pwd`:/data sjourdan/terraform:0.7.0-rc4 get
+2016/08/01 10:38:45 [INFO] Terraform version: 0.7.0 rc4 abfd2c1daf914867b8737ac9419f3bd2ecc7a822
+2016/08/01 10:38:45 [DEBUG] Detected home directory from env var: /root
+2016/08/01 10:38:45 [DEBUG] Detected home directory from env var: /root
+2016/08/01 10:38:45 [DEBUG] Attempting to open CLI config file: /root/.terraformrc
+2016/08/01 10:38:45 [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2016/08/01 10:38:45 [DEBUG] Detected home directory from env var: /root
+2016/08/01 10:38:45 [DEBUG] plugin: waiting for all plugin processes to complete...
+docker run -it --rm -e TF_LOG=DEBUG -v `pwd`:/data sjourdan/terraform:0.7.0-rc4 plan
+2016/08/01 10:38:46 [INFO] Terraform version: 0.7.0 rc4 abfd2c1daf914867b8737ac9419f3bd2ecc7a822
+2016/08/01 10:38:46 [DEBUG] Detected home directory from env var: /root
+2016/08/01 10:38:46 [DEBUG] Detected home directory from env var: /root
+2016/08/01 10:38:46 [DEBUG] Attempting to open CLI config file: /root/.terraformrc
+2016/08/01 10:38:46 [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2016/08/01 10:38:46 [DEBUG] Detected home directory from env var: /root
+2016/08/01 10:38:46 [DEBUG] DestroyEdgeInclude: Checking: digitalocean_ssh_key.default
+2016/08/01 10:38:46 [DEBUG] Checking variable noop: var.ssh_key_file
+2016/08/01 10:38:46 [DEBUG] No diff, not a noop
+2016/08/01 10:38:46 [DEBUG] Checking resource noop: digitalocean_ssh_key.default
+2016/08/01 10:38:46 [DEBUG] No diff, not a noop
+2016/08/01 10:38:46 [DEBUG] Checking variable noop: var.do_token
+2016/08/01 10:38:46 [DEBUG] No diff, not a noop
+2016/08/01 10:38:46 [DEBUG] Starting graph walk: walkInput
+2016/08/01 10:38:46 [DEBUG] vertex root.var.do_token: walking
+2016/08/01 10:38:46 [DEBUG] vertex root.var.do_token: evaluating
+2016/08/01 10:38:46 [DEBUG] root: eval: *terraform.EvalNoop
+2016/08/01 10:38:46 [DEBUG] vertex provider.digitalocean, got dep: var.do_token
+2016/08/01 10:38:46 [DEBUG] vertex root.provider.digitalocean: walking
+2016/08/01 10:38:46 [DEBUG] vertex root.provider.digitalocean: evaluating
+2016/08/01 10:38:46 [TRACE] [walkInput] Entering eval tree: provider.digitalocean
+2016/08/01 10:38:46 [DEBUG] root: eval: *terraform.EvalSequence
+2016/08/01 10:38:46 [DEBUG] root: eval: *terraform.EvalInitProvider
+2016/08/01 10:38:46 [DEBUG] vertex root.var.ssh_key_file: walking
+2016/08/01 10:38:46 [DEBUG] vertex root.var.ssh_key_file: evaluating
+2016/08/01 10:38:46 [TRACE] [walkInput] Entering eval tree: var.ssh_key_file
+2016/08/01 10:38:46 [DEBUG] root: eval: *terraform.EvalNoop
+2016/08/01 10:38:46 [TRACE] [walkInput] Exiting eval tree: var.ssh_key_file
+2016/08/01 10:38:46 [DEBUG] plugin: starting plugin: /bin/terraform []string{"/bin/terraform", "internal-plugin", "provider", "digitalocean"}
+2016/08/01 10:38:46 [DEBUG] vertex digitalocean_ssh_key.default, got dep: var.ssh_key_file
+2016/08/01 10:38:46 [DEBUG] plugin: waiting for RPC address for: /bin/terraform
+2016/08/01 10:38:46 [DEBUG] plugin: terraform: 2016/08/01 10:38:46 [INFO] Terraform version: 0.7.0 rc4 abfd2c1daf914867b8737ac9419f3bd2ecc7a822
+2016/08/01 10:38:46 [DEBUG] plugin: terraform: 2016/08/01 10:38:46 [DEBUG] Detected home directory from env var: /root
+2016/08/01 10:38:46 [DEBUG] plugin: terraform: 2016/08/01 10:38:46 [DEBUG] Detected home directory from env var: /root
+2016/08/01 10:38:46 [DEBUG] plugin: terraform: 2016/08/01 10:38:46 [DEBUG] Attempting to open CLI config file: /root/.terraformrc
+2016/08/01 10:38:46 [DEBUG] plugin: terraform: 2016/08/01 10:38:46 [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2016/08/01 10:38:46 [DEBUG] plugin: terraform: 2016/08/01 10:38:46 [DEBUG] Detected home directory from env var: /root
+2016/08/01 10:38:46 [DEBUG] plugin: terraform: digitalocean-provider (internal) 2016/08/01 10:38:46 [INFO] Starting provider plugin digitalocean
+2016/08/01 10:38:46 [DEBUG] plugin: terraform: digitalocean-provider (internal) 2016/08/01 10:38:46 [DEBUG] plugin: plugin address: unix /tmp/plugin823719927
+2016/08/01 10:38:46 [DEBUG] root: eval: *terraform.EvalOpFilter
+2016/08/01 10:38:46 [DEBUG] root: eval: *terraform.EvalSequence
+2016/08/01 10:38:46 [DEBUG] root: eval: *terraform.EvalGetProvider
+2016/08/01 10:38:46 [DEBUG] root: eval: *terraform.EvalInterpolate
+2016/08/01 10:38:46 [DEBUG] root: eval: *terraform.EvalBuildProviderConfig
+2016/08/01 10:38:46 [DEBUG] root: eval: *terraform.EvalInputProvider
+2016/08/01 10:38:46 [DEBUG] root: eval: terraform.EvalNoop
+2016/08/01 10:38:46 [DEBUG] root: eval: terraform.EvalNoop
+2016/08/01 10:38:46 [DEBUG] root: eval: terraform.EvalNoop
+2016/08/01 10:38:46 [DEBUG] vertex digitalocean_ssh_key.default, got dep: provider.digitalocean
+2016/08/01 10:38:46 [DEBUG] vertex root.digitalocean_ssh_key.default: walking
+2016/08/01 10:38:46 [DEBUG] vertex root.digitalocean_ssh_key.default: evaluating
+2016/08/01 10:38:46 [DEBUG] root: eval: terraform.EvalNoop
+2016/08/01 10:38:46 [DEBUG] root: eval: *terraform.EvalCountFixZeroOneBoundary
+2016/08/01 10:38:46 [TRACE] [walkInput] Exiting eval tree: digitalocean_ssh_key.default
+2016/08/01 10:38:46 [DEBUG] vertex root.digitalocean_ssh_key.default: expanding/walking dynamic subgraph
+2016/08/01 10:38:46 [TRACE] Graph after step *terraform.ResourceCountTransformer:
+
+digitalocean_ssh_key.default - *terraform.graphNodeExpandedResource
+2016/08/01 10:38:46 [DEBUG] vertex root.digitalocean_ssh_key.default: walking
+2016/08/01 10:38:46 [DEBUG] vertex root.digitalocean_ssh_key.default: evaluating
+2016/08/01 10:38:46 [DEBUG] root: eval: terraform.EvalNoop
+2016/08/01 10:38:46 [DEBUG] root: eval: terraform.EvalNoop
+2016/08/01 10:38:46 [DEBUG] root: eval: terraform.EvalNoop
+2016/08/01 10:38:46 [DEBUG] root: eval: terraform.EvalNoop
+2016/08/01 10:38:46 [DEBUG] vertex provider.digitalocean (close), got dep: digitalocean_ssh_key.default
+2016/08/01 10:38:46 [DEBUG] vertex root.provider.digitalocean (close): walking
+2016/08/01 10:38:46 [DEBUG] vertex root.provider.digitalocean (close): evaluating
+2016/08/01 10:38:46 [TRACE] [walkInput] Entering eval tree: provider.digitalocean (close)
+2016/08/01 10:38:46 [DEBUG] root: eval: *terraform.EvalCloseProvider
+2016/08/01 10:38:46 [DEBUG] DestroyEdgeInclude: Checking: digitalocean_ssh_key.default
+2016/08/01 10:38:46 [TRACE] Graph after step *terraform.DestroyTransformer:
+
+digitalocean_ssh_key.default - *terraform.GraphNodeConfigResource
+  digitalocean_ssh_key.default (destroy) - *terraform.graphNodeResourceDestroy
+  provider.digitalocean - *terraform.GraphNodeConfigProvider
+  var.ssh_key_file - *terraform.GraphNodeConfigVariable
+digitalocean_ssh_key.default (destroy) - *terraform.graphNodeResourceDestroy
+  provider.digitalocean - *terraform.GraphNodeConfigProvider
+provider.digitalocean - *terraform.GraphNodeConfigProvider
+  var.do_token - *terraform.GraphNodeConfigVariable
+var.do_token - *terraform.GraphNodeConfigVariable
+var.ssh_key_file - *terraform.GraphNodeConfigVariable
+2016/08/01 10:38:46 [DEBUG] No diff, not a noop
+2016/08/01 10:38:46 [DEBUG] Starting graph walk: walkValidate
+2016/08/01 10:38:46 [DEBUG] vertex root.var.do_token: walking
+2016/08/01 10:38:46 [DEBUG] vertex root.var.do_token: evaluating
+2016/08/01 10:38:46 [TRACE] [walkValidate] Entering eval tree: var.do_token
+2016/08/01 10:38:46 [DEBUG] root: eval: *terraform.EvalNoop
+2016/08/01 10:38:46 [DEBUG] vertex root.provider.digitalocean: evaluating
+2016/08/01 10:38:46 [TRACE] [walkValidate] Entering eval tree: provider.digitalocean
+2016/08/01 10:38:46 [DEBUG] root: eval: *terraform.EvalSequence
+2016/08/01 10:38:46 [DEBUG] root: eval: *terraform.EvalInitProvider
+2016/08/01 10:38:46 [DEBUG] vertex root.var.ssh_key_file: walking
+2016/08/01 10:38:46 [DEBUG] vertex root.var.ssh_key_file: evaluating
+2016/08/01 10:38:46 [DEBUG] root: eval: terraform.EvalNoop
+2016/08/01 10:38:46 [DEBUG] root: eval: *terraform.EvalOpFilter
+2016/08/01 10:38:46 [DEBUG] root: eval: *terraform.EvalSequence
+2016/08/01 10:38:46 [DEBUG] root: eval: *terraform.EvalGetProvider
+2016/08/01 10:38:46 [DEBUG] root: eval: *terraform.EvalInterpolate
+2016/08/01 10:38:46 [DEBUG] root: eval: *terraform.EvalBuildProviderConfig
+2016/08/01 10:38:46 [DEBUG] root: eval: *terraform.EvalValidateProvider
+2016/08/01 10:38:46 [DEBUG] root: eval: *terraform.EvalSetProviderConfig
+2016/08/01 10:38:46 [DEBUG] root: eval: terraform.EvalNoop
+2016/08/01 10:38:46 [DEBUG] root: eval: terraform.EvalNoop
+2016/08/01 10:38:46 [TRACE] [walkValidate] Exiting eval tree: provider.digitalocean
+2016/08/01 10:38:46 [DEBUG] vertex digitalocean_ssh_key.default, got dep: provider.digitalocean
+2016/08/01 10:38:46 [DEBUG] vertex root.digitalocean_ssh_key.default: walking
+2016/08/01 10:38:46 [DEBUG] vertex root.digitalocean_ssh_key.default: evaluating
+2016/08/01 10:38:46 [TRACE] [walkValidate] Entering eval tree: digitalocean_ssh_key.default
+2016/08/01 10:38:46 [DEBUG] root: eval: *terraform.EvalSequence
+2016/08/01 10:38:46 [DEBUG] root: eval: *terraform.EvalInterpolate
+2016/08/01 10:38:46 [DEBUG] root: eval: *terraform.EvalOpFilter
+2016/08/01 10:38:46 [DEBUG] root: eval: *terraform.EvalValidateCount
+2016/08/01 10:38:46 [DEBUG] root: eval: *terraform.EvalCountFixZeroOneBoundary
+2016/08/01 10:38:46 [TRACE] [walkValidate] Exiting eval tree: digitalocean_ssh_key.default
+2016/08/01 10:38:46 [DEBUG] vertex root.digitalocean_ssh_key.default: expanding/walking dynamic subgraph
+2016/08/01 10:38:46 [TRACE] Graph after step *terraform.ResourceCountTransformer:
+
+digitalocean_ssh_key.default - *terraform.graphNodeExpandedResource
+2016/08/01 10:38:46 [TRACE] Graph after step *terraform.TargetsTransformer:
+
+digitalocean_ssh_key.default - *terraform.graphNodeExpandedResource
+2016/08/01 10:38:46 [TRACE] Graph after step *terraform.RootTransformer:
+
+digitalocean_ssh_key.default - *terraform.graphNodeExpandedResource
+2016/08/01 10:38:46 [DEBUG] vertex root.digitalocean_ssh_key.default: walking
+2016/08/01 10:38:46 [DEBUG] vertex root.digitalocean_ssh_key.default: evaluating
+2016/08/01 10:38:46 [TRACE] [walkValidate] Entering eval tree: digitalocean_ssh_key.default
+2016/08/01 10:38:46 [DEBUG] root: eval: *terraform.EvalSequence
+2016/08/01 10:38:46 [DEBUG] root: eval: *terraform.EvalOpFilter
+2016/08/01 10:38:46 [DEBUG] root: eval: *terraform.EvalSequence
+2016/08/01 10:38:46 [DEBUG] root: eval: *terraform.EvalGetProvider
+2016/08/01 10:38:46 [DEBUG] root: eval: *terraform.EvalInterpolate
+2016/08/01 10:38:46 [DEBUG] root: eval: *terraform.EvalValidateResource
+Refreshing Terraform state in-memory prior to plan...
+2016/08/01 10:38:46 [DEBUG] root: eval: *terraform.EvalInstanceInfo
+2016/08/01 10:38:46 [DEBUG] root: eval: terraform.EvalNoop
+2016/08/01 10:38:46 [DEBUG] root: eval: terraform.EvalNoop
+2016/08/01 10:38:46 [DEBUG] root: eval: terraform.EvalNoop
+2016/08/01 10:38:46 [DEBUG] root: eval: terraform.EvalNoop
+2016/08/01 10:38:46 [TRACE] [walkValidate] Exiting eval tree: digitalocean_ssh_key.default
+2016/08/01 10:38:46 [DEBUG] vertex provider.digitalocean (close), got dep: digitalocean_ssh_key.default
+2016/08/01 10:38:46 [DEBUG] vertex root.provider.digitalocean (close): walking
+2016/08/01 10:38:46 [DEBUG] vertex root.provider.digitalocean (close): evaluating
+2016/08/01 10:38:46 [TRACE] [walkValidate] Entering eval tree: provider.digitalocean (close)
+2016/08/01 10:38:46 [DEBUG] root: eval: *terraform.EvalCloseProvider
+2016/08/01 10:38:46 [TRACE] [walkValidate] Exiting eval tree: provider.digitalocean (close)
+2016/08/01 10:38:46 [TRACE] Graph after step *terraform.ConfigTransformer:
+
+digitalocean_ssh_key.default - *terraform.GraphNodeConfigResource
+  var.ssh_key_file - *terraform.GraphNodeConfigVariable
+provider.digitalocean - *terraform.GraphNodeConfigProvider
+  var.do_token - *terraform.GraphNodeConfigVariable
+var.do_token - *terraform.GraphNodeConfigVariable
+var.ssh_key_file - *terraform.GraphNodeConfigVariable
+2016/08/01 10:38:46 [TRACE] Graph after step *terraform.OrphanTransformer:
+
+digitalocean_ssh_key.default - *terraform.GraphNodeConfigResource
+  var.ssh_key_file - *terraform.GraphNodeConfigVariable
+provider.digitalocean - *terraform.GraphNodeConfigProvider
+  var.do_token - *terraform.GraphNodeConfigVariable
+var.do_token - *terraform.GraphNodeConfigVariable
+var.ssh_key_file - *terraform.GraphNodeConfigVariable
+2016/08/01 10:38:46 [TRACE] Graph after step *terraform.AddOutputOrphanTransformer:
+
+digitalocean_ssh_key.default - *terraform.GraphNodeConfigResource
+  var.ssh_key_file - *terraform.GraphNodeConfigVariable
+provider.digitalocean - *terraform.GraphNodeConfigProvider
+  var.do_token - *terraform.GraphNodeConfiDEBUG] Starting graph walk: walkRefresh
+2016/08/01 10:38:46 [DEBUG] vertex root.var.do_token: walking
+2016/08/01 10:38:46 [DEBUG] vertex root.var.do_token: evaluating
+2016/08/01 10:38:46 [TRACE] [walkRefresh] Entering eval tree: var.do_token
+2016/08/01 10:38:46 [DEBUG] root: eval: *terraform.EvalNoop
+2016/08/01 10:38:46 [TRACE] [walkRefresh] Exiting eval tree: var.do_token
+2016/08/01 10:38:46 [DEBUG] vertex root.var.ssh_key_file: walking
+2016/08/01 10:38:46 [DEBUG] vertex root.var.ssh_key_file: evaluating
+2016/08/01 10:38:46 [TRACE] [walkRefresh] Entering eval tree: var.ssh_key_file
+2016/08/01 10:38:46 [DEBUG] root: eval: *terraform.EvalNoop
+2016/08/01 10:38:46 [TRACE] [walkRefresh] Exiting eval tree: var.ssh_key_file
+2016/08/01 10:38:46 [DEBUG] vertex provider.digitalocean, got dep: var.do_token
+2016/08/01 10:38:46 [DEBUG] vertex root.provider.digitalocean: walking
+2016/08/01 10:38:46 [DEBUG] vertex root.provider.digitalocean: evaluating
+2016/08/01 10:38:46 [TRACE] [walkRefresh] Entering eval tree: provider.digitalocean
+2016/08/01 10:38:46 [DEBUG] root: eval: *terraform.EvalSequence
+2016/08/01 10:38:46 [DEBUG] root: eval: *terraform.EvalInitProvider
+2016/08/01 10:38:46 [DEBUG] vertex digitalocean_ssh_key.default, got dep: var.ssh_key_file
+2016/08/01 10:38:46 [DEBUG] root: eval: terraform.EvalNoop
+2016/08/01 10:38:46 [DEBUG] root: eval: terraform.EvalNoop
+2016/08/01 10:38:46 [DEBUG] root: eval: *terraform.EvalOpFilter
+2016/08/01 10:38:46 [DEBUG] root: eval: *terraform.EvalSequence
+2016/08/01 10:38:46 [DEBUG] root: eval: *terraform.EvalGetProvider
+2016/08/01 10:38:46 [DEBUG] root: eval: *terraform.EvalInterpolate
+2016/08/01 10:38:46 [DEBUG] root: eval: *terraform.EvalBuildProviderConfig
+2016/08/01 10:38:46 [DEBUG] root: eval: *terraform.EvalSetProviderConfig
+2016/08/01 10:38:46 [DEBUG] root: eval: *terraform.EvalOpFilter
+2016/08/01 10:38:46 [DEBUG] root: eval: *terraform.EvalSequence
+2016/08/01 10:38:46 [DEBUG] root: eval: *terraform.EvalConfigProvider
+2016/08/01 10:38:46 [DEBUG] plugin: terraform: digitalocean-provider (internal) 2016/08/01 10:38:46 [INFO] DigitalOcean Client configured for URL: https://api.digitalocean.com/
+The refreshed state will be used to calculate this plan, but
+:46 [DEBUG] root: eval: *terraform.EvalRefresh
+will not be persisted to local or remote state storage.
+
+[0m[1mdigitalocean_ssh_key.default: Refreshing state... (ID: 2628891)[0m
+2016/08/01 10:38:47 [DEBUG] root: eval: *terraform.EvalWriteState
+2016/08/01 10:38:47 [DEBUG] root: eval: terraform.EvalNoop
+2016/08/01 10:38:47 [DEBUG] root: eval: terraform.EvalNoop
+2016/08/01 10:38:47 [DEBUG] root: eval: terraform.EvalNoop
+2016/08/01 10:38:47 [DEBUG] vertex provider.digitalocean (close), got dep: digitalocean_ssh_key.default
+2016/08/01 10:38:47 [DEBUG] vertex root.provider.digitalocean (close): walking
+2016/08/01 10:38:47 [DEBUG] vertex root.provider.digitalocean (close): evaluating
+2016/08/01 10:38:47 [DEBUG] root: eval: *terraform.EvalCloseProvider
+
+2016/08/01 10:38:47 [DEBUG] DestroyEdgeInclude: Checking: digitalocean_ssh_key.default
+2016/08/01 10:38:47 [DEBUG] Checking variable noop: var.ssh_key_file
+2016/08/01 10:38:47 [DEBUG] No diff, not a noop
+2016/08/01 10:38:47 [DEBUG] Checking resource noop: digitalocean_ssh_key.default
+2016/08/01 10:38:47 [DEBUG] No diff, not a noop
+2016/08/01 10:38:47 [DEBUG] Checking variable noop: var.do_token
+2016/08/01 10:38:47 [DEBUG] No diff, not a noop
+2016/08/01 10:38:47 [DEBUG] Starting graph walk: walkPlan
+2016/08/01 10:38:47 [DEBUG] vertex root.var.ssh_key_file: walking
+2016/08/01 10:38:47 [DEBUG] vertex root.var.ssh_key_file: evaluating
+2016/08/01 10:38:47 [DEBUG] root: eval: *terraform.EvalNoop
+2016/08/01 10:38:47 [DEBUG] vertex root.var.do_token: walking
+2016/08/01 10:38:47 [DEBUG] vertex digitalocean_ssh_key.default, got dep: var.ssh_key_file
+2016/08/01 10:38:47 [DEBUG] vertex root.var.do_token: evaluating
+2016/08/01 10:38:47 [DEBUG] root: eval: *terraform.EvalNoop
+2016/08/01 10:38:47 [DEBUG] vertex provider.digitalocean, got dep: var.do_token
+2016/08/01 10:38:47 [DEBUG] vertex root.provider.digitalocean: walking
+2016/08/01 10:38:47 [DEBUG] vertex root.provider.digitalocean: evaluating
+2016/08/01 10:38:47 [DEBUG] root: eval: *terraform.EvalSequence
+2016/08/01 10:38:47 [DEBUG] root: eval: *terraform.EvalInitProvider
+2016/08/01 10:38:47 [DEBUG] root: eval: terraform.EvalNoop
+2016/08/01 10:38:47 [DEBUG] root: eval: terraform.EvalNoop
+2016/08/01 10:38:47 [DEBUG] root: eval: *terraform.EvalOpFilter
+2016/08/01 10:38:47 [DEBUG] root: eval: *terraform.EvalSequence
+2016/08/01 10:38:47 [DEBUG] root: eval: *terraform.EvalGetProvider
+2016/08/01 10:38:47 [DEBUG] root: eval: *terraform.EvalInterpolate
+2016/08/01 10:38:47 [DEBUG] root: eval: *terraform.EvalBuildProviderConfig
+2016/08/01 10:38:47 [DEBUG] root: eval: *terraform.EvalSetProviderConfig
+2016/08/01 10:38:47 [DEBUG] root: eval: *terraform.EvalOpFilter
+2016/08/01 10:38:47 [DEBUG] root: eval: *terraform.EvalSequence
+2016/08/01 10:38:47 [DEBUG] root: eval: *terraform.EvalConfigProvider
+2016/08/01 10:38:47 [DEBUG] plugin: terraform: digitalocean-provider (internal) 2016/08/01 10:38:47 [INFO] DigitalOcean Client configured for URL: https://api.digitalocean.com/
+2016/08/01 10:38:47 [DEBUG] vertex digitalocean_ssh_key.default, got dep: provider.digitalocean
+2016/08/01 10:38:47 [DEBUG] vertex root.digitalocean_ssh_key.default: walking
+2016/08/01 10:38:47 [DEBUG] vertex root.digitalocean_ssh_key.default: evaluating
+2016/08/01 10:38:47 [DEBUG] root: eval: *terraform.EvalSequence
+2016/08/01 10:38:47 [DEBUG] root: eval: *terraform.EvalInterpolate
+2016/08/01 10:38:47 [DEBUG] root: eval: terraform.EvalNoop
+2016/08/01 10:38:47 [DEBUG] root: eval: *terraform.EvalCountFixZeroOneBoundary
+2016/08/01 10:38:47 [DEBUG] vertex root.digitalocean_ssh_key.default: expanding/walking dynamic subgraph
+2016/08/01 10:38:47 [DEBUG] vertex root.digitalocean_ssh_key.default: walking
+2016/08/01 10:38:47 [DEBUG] vertex root.digitalocean_ssh_key.default: evaluating
+2016/08/01 10:38:47 [DEBUG] root: eval: *terraform.EvalSequence
+2016/08/01 10:38:47 [DEBUG] root: eval: terraform.EvalNoop
+2016/08/01 10:38:47 [DEBUG] root: eval: *terraform.EvalInstanceInfo
+2016/08/01 10:38:47 [DEBUG] root: eval: terraform.EvalNoop
+2016/08/01 10:38:47 [DEBUG] root: eval: *terraform.EvalOpFilter
+2016/08/01 10:38:47 [DEBUG] root: eval: *terraform.EvalSequence
+2016/08/01 10:38:47 [DEBUG] root: eval: *terraform.EvalInterpolate
+2016/08/01 10:38:47 [DEBUG] root: eval: *terraform.EvalGetProvider
+2016/08/01 10:38:47 [DEBUG] root: eval: *terraform.EvalValidateResource
+2016/08/01 10:38:47 [DEBUG] root: eval: *terraform.EvalReadState
+2016/08/01 10:38:47 [DEBUG] root: eval: *terraform.EvalDiff
+The Terraform execution plan has been generated and is shown below.
+Resources are shown in alphabetical order for quick scanning. Green resources
+will be created (or destroyed and then created if an existing resource
+exists), yellow resources are being changed in-place, and red resources
+will be destroyed. Cyan entries are data sources to be read.
+
+Note: You didn't specify an "-out" parameter to save this plan, so when
+2016/08/01 10:38:47 [DEBUG] root: eval: *terraform.EvalCheckPreventDestroy
+2016/08/01 10:38:47 [DEBUG] root: eval: *terraform.EvalWriteState
+2016/08/01 10:38:47 [DEBUG] root: eval: *terraform.EvalWriteDiff
+2016/08/01 10:38:47 [DEBUG] root: eval: terraform.EvalNoop
+2016/08/01 10:38:47 [DEBUG] root: eval: terraform.EvalNoop
+2016/08/01 10:38:47 [TRACE] [walkPlan] Exiting eval tree: digitalocean_ssh_key.default
+2016/08/01 10:38:47 [DEBUG] vertex provider.digitalocean (close), got dep: digitalocean_ssh_key.default
+2016/08/01 10:38:47 [DEBUG] vertex root.provider.digitalocean (close): walking
+2016/08/01 10:38:47 [DEBUG] vertex root.provider.digitalocean (close): evaluating
+2016/08/01 10:38:47 [TRACE] [walkPlan] Entering eval tree: provider.digitalocean (close)
+2016/08/01 10:38:47 [DEBUG] root: eval: *terraform.EvalCloseProvider
+2016/08/01 10:38:47 [TRACE] [walkPlan] Exiting eval tree: provider.digitalocean (close)
+2016/08/01 10:38:47 [TRACE] Graph after step *terraform.ConfigTransformer:
+
+digitalocean_ssh_key.default - *terraform.GraphNodeConfigResource
+  var.ssh_key_file - *terraform.GraphNodeConfigVariable
+provider.digitalocean - *terraform.GraphNodeConfigProvider
+  var.do_token - *terraform.GraphNodeConfigVariable
+var.do_token - *terraform.GraphNodeConfigVariable
+var.ssh_key_file - *terraform.GraphNodeConfigVariable
+2016/08/01 10:38:47 [TRACE] Graph after step *terraform.OrphanTransformer:
+
+digitalocean_ssh_key.default - *terraform.GraphNodeConfigResource
+  var.ssh_key_file - *terraform.GraphNodeConfigVariable
+provider.digitalocean - *terraform.GraphNodeConfigProvider
+  var.do_token - *terraform.GraphNodeConfigVariable
+var.do_token - *terraform.GraphNodeConfigVariable
+var.ssh_key_file - *terraform.GraphNodeConfigVariable
+2016/08/01 10:38:47 [TRACE] Graph after step *terraform.AddOutputOrphanTransformer:
+
+digitalocean_ssh_key.default - *terraform.GraphNodeConfigResource
+  var.ssh_key_file - *terraform.GraphNodeConfigVariable
+provider.digitalocean - *terraform.GraphNodeConfigProvider
+  var.do_token - *terraform.GraphN"apply" is called, Terraform can't guarantee this is what will execute.
+
+[32m-/+ digitalocean_ssh_key.default
+2016/08/01 10:38:47 [DEBUG] plugin: /bin/terraform: plugin process exited
+[0m    fingerprint: "2f:5b:be:09:8d:d2:f4:77:fa:31:07:e6:43:1c:28:f2" => "<computed>"
+    name:        "Digital Ocean SSH Key (bug)" => "Digital Ocean SSH Key (bug)"
+    public_key:  "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDuIIgW4TB9UVylMnrhfc2CdIG/igUHr++bpcobS1xaxjKXpz9FIP7a7j1RlKD214rJqNlSbV9sXf5QqS3Dq2n0aCQWDNTH5anLf6PQ7hE5fvZkYpSHPmDdSLV26TjFxG4SH6oDfiSCSJhS+IXHCM/E4dTvqHOP8Lq6xRFrDQO0laPd6TblWHAjWOM/OcvkeJ+lFDjrH6RL5AcfMY4VSwsJUyjUNImcqTKHzgek2C2FgofFDCV/m+t/ikv5VkUh/9qmcbqLqiesz/wHn6v1F3sbe5j2HUNSXwr/wXjCCzcxuNamp7CHGAYf0YFIMNYIsNtvSyRSfcNiq/nsAxnQkr0E test@bug" => "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDuIIgW4TB9UVylMnrhfc2CdIG/igUHr++bpcobS1xaxjKXpz9FIP7a7j1RlKD214rJqNlSbV9sXf5QqS3Dq2n0aCQWDNTH5anLf6PQ7hE5fvZkYpSHPmDdSLV26TjFxG4SH6oDfiSCSJhS+IXHCM/E4dTvqHOP8Lq6xRFrDQO0laPd6TblWHAjWOM/OcvkeJ+lFDjrH6RL5AcfMY4VSwsJUyjUNImcqTKHzgek2C2FgofFDCV/m+t/ikv5VkUh/9qmcbqLqiesz/wHn6v1F3sbe5j2HUNSXwr/wXjCCzcxuNamp7CHGAYf0YFIMNYIsNtvSyRSfcNiq/nsAxnQkr0E test@bug\n" [31m(forces new resource)[0m
+[0m
+[0m
+[0m[1mPlan:[0m 1 to add, 0 to change, 1 to destroy.[0m
